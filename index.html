@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>44Society — Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LICENSE GATE OVERLAY -->
+  <div id="licenseGate" class="gate-overlay">
+    <div class="gate-box">
+      <div class="gate-logo">44<span>SOCIETY</span></div>
+      <p class="gate-sub">TOOLS ACCESS</p>
+      <div class="gate-line"></div>
+      <p class="gate-desc">Enter your Discord username to verify access.</p>
+      <input type="text" id="discordInput" class="gate-input" placeholder="yourname#0000 or username" autocomplete="off" spellcheck="false" />
+      <div id="gateError" class="gate-error"></div>
+      <button id="gateBtn" class="gate-btn">VERIFY ACCESS</button>
+      <p class="gate-note">Access is monitored. Unauthorized use is logged.</p>
+    </div>
+  </div>
+
+  <!-- MAIN SITE -->
+  <div id="mainSite" class="hidden">
+
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="nav-brand">44<span>SOCIETY</span></div>
+        <div class="nav-right">
+          <span class="nav-user" id="navUser"></span>
+          <div class="nav-status"><span class="dot"></span>LIVE</div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-inner">
+        <div class="hero-tag">EXCLUSIVE TOOLSET</div>
+        <h1 class="hero-title">TOOLS THAT<br/><span class="hero-accent">HIT DIFFERENT</span></h1>
+        <p class="hero-desc">Premium injectors, bot systems, and mods — built for those who know what they're doing.</p>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">4</span><span class="stat-label">TOOLS</span></div>
+          <div class="stat-sep"></div>
+          <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">ACCESS</span></div>
+          <div class="stat-sep"></div>
+          <div class="stat"><span class="stat-num">GCash</span><span class="stat-label">PAYMENT</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS GRID -->
+    <section class="tools-section">
+      <div class="section-header">
+        <div class="section-line"></div>
+        <h2 class="section-title">AVAILABLE TOOLS</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="tools-grid">
+
+        <!-- CARD 1 -->
+        <div class="tool-card" data-tool="Plugin Injector" data-price="₱24" data-category="PLUGINS">
+          <div class="card-top">
+            <div class="card-cat">PLUGINS</div>
+            <div class="card-price">₱24</div>
+          </div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="6" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+              <rect x="26" y="6" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+              <rect x="6" y="26" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M34 26v8M30 30h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Plugin Injector</h3>
+          <p class="card-desc">Allows you to inject forceOp on plugins with zero detection vectors. Persistent session control.</p>
+          <div class="card-tags">
+            <span class="tag">forceOp</span>
+            <span class="tag">persistent</span>
+            <span class="tag">stealth</span>
+          </div>
+          <button class="buy-btn" onclick="openBuy(this)">BUY NOW — ₱24</button>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="tool-card" data-tool="Mods Injector" data-price="₱31" data-category="MODS">
+          <div class="card-top">
+            <div class="card-cat">MODS</div>
+            <div class="card-price">₱31</div>
+          </div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 6L6 16v16l18 10 18-10V16L24 6z" stroke="currentColor" stroke-width="2"/>
+              <path d="M6 16l18 10M24 42V26M42 16L24 26" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Mods Injector</h3>
+          <p class="card-desc">Inject Fabric mods with integrated credentials logger. Captures and routes auth tokens seamlessly.</p>
+          <div class="card-tags">
+            <span class="tag">fabric</span>
+            <span class="tag">cred-log</span>
+            <span class="tag">inject</span>
+          </div>
+          <button class="buy-btn" onclick="openBuy(this)">BUY NOW — ₱31</button>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="tool-card" data-tool="Bot Attack — No Cooldown" data-price="₱20" data-category="BOT">
+          <div class="card-top">
+            <div class="card-cat">BOT</div>
+            <div class="card-price">₱20</div>
+          </div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 42c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="24" cy="18" r="4" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Bot Attack</h3>
+          <p class="card-desc">No cooldown mode. Sustained bot wave execution without rate limiting or delay overhead.</p>
+          <div class="card-tags">
+            <span class="tag">no-cd</span>
+            <span class="tag">sustained</span>
+            <span class="tag">wave</span>
+          </div>
+          <button class="buy-btn" onclick="openBuy(this)">BUY NOW — ₱20</button>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="tool-card featured" data-tool="Bot Attack — Auto Scrape Proxy" data-price="₱45" data-category="BOT">
+          <div class="featured-badge">BEST VALUE</div>
+          <div class="card-top">
+            <div class="card-cat">BOT</div>
+            <div class="card-price">₱45</div>
+          </div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 42c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="24" cy="18" r="4" fill="currentColor"/>
+              <path d="M36 6l4 4-4 4M12 10h28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Bot Attack<br/><small>Auto Scrape Proxy</small></h3>
+          <p class="card-desc">Full bot attack suite with automatic proxy scraping. Rotating residential proxies, zero manual config.</p>
+          <div class="card-tags">
+            <span class="tag">auto-proxy</span>
+            <span class="tag">scrape</span>
+            <span class="tag">rotating</span>
+            <span class="tag">residential</span>
+          </div>
+          <button class="buy-btn" onclick="openBuy(this)">BUY NOW — ₱45</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">44<span>SOCIETY</span></div>
+        <p class="footer-note">All transactions via GCash. After payment, DM on Discord for delivery.</p>
+        <p class="footer-copy">© 2025 44Society. Restricted access.</p>
+      </div>
+    </footer>
+
+  </div><!-- /mainSite -->
+
+  <!-- GCASH MODAL -->
+  <div id="buyModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-tag">PURCHASE</div>
+      <h2 class="modal-title" id="modalTitle">Tool Name</h2>
+      <div class="modal-price" id="modalPrice">₱00</div>
+      <div class="modal-sep"></div>
+      <div class="modal-steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div class="step-text">
+            <strong>Send via GCash</strong>
+            <p>Transfer the exact amount to the seller's GCash number. Screenshot your receipt.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div class="step-text">
+            <strong>DM on Discord</strong>
+            <p>Send your receipt screenshot to the Discord below. Include the tool name in your message.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div class="step-text">
+            <strong>Receive Tool</strong>
+            <p>After verification, the tool will be delivered directly in Discord DMs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-discord">
+        <span class="discord-label">DISCORD</span>
+        <span class="discord-name" id="discordHandle">jeromejames28r</span>
+        <button class="copy-btn" onclick="copyDiscord()">COPY</button>
+      </div>
+      <div id="copyConfirm" class="copy-confirm">Copied!</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
